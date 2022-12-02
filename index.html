@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>
+      dukky
+    </title>
+  </head>    
+  <body>
+    <h4>
+      Press space!
+    </h4>
+    <img src="dukk.gif" alt="dukk" class="center">
+    <embed src="hey_ya.mp3" loop="true" autostart="true" width="2" height="0">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+      let apiKey = 'd9e53816d07345139c58d0ea733e3870';
+$.getJSON('https://api.bigdatacloud.net/data/ip-geolocation?key=' + apiKey, function(data) {
+  console.log(JSON.stringify(data, null, 2));
+  document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        document.write(JSON.stringify(data, null, 2));
+    }
+}
+});
+    </script>
+  </body>
+</html>
