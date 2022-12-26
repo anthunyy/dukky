@@ -8,22 +8,9 @@
   </head>    
   <body>
     <h4>
-      Press space!
+      dukk
     </h4>
     <img src="images/dukk.gif" alt="dukk" class="center">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script>
-      var audio = new Audio('sounds/hey_ya.mp3');
-      audio.play();
-      let apiKey = 'd9e53816d07345139c58d0ea733e3870';
-$.getJSON('https://api.bigdatacloud.net/data/ip-geolocation?key=' + apiKey, function(data) {
-  console.log(JSON.stringify(data, null, 2));
-  document.body.onkeyup = function(e){
-    if(e.keyCode == 32){
-        document.write(JSON.stringify(data, null, 2));
-    }
-}
-});
-    </script>
   </body>
 </html>
