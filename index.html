@@ -5,11 +5,31 @@
     <title>
       dukky
     </title>
+    <style>
+      audio {
+          display: none;
+      }
+  </style>
   </head>    
   <body>
-    <h4>
+    <h2>
       dukk
-    </h4>
+    </h2>
+    <button id="playButton">Play</button>
+    <audio id="audioPlayer">
+        <source src="sounds/hey_ya.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        const playButton = document.getElementById("playButton");
+        const audioPlayer = document.getElementById("audioPlayer");
+
+        playButton.addEventListener("click", () => {
+            audioPlayer.play();
+            playButton.style.display = "none";
+        });
+    </script>
     <img src="images/dukk.gif" alt="dukk" class="center">
   </body>
 </html>
+
